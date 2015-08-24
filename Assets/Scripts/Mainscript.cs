@@ -3,13 +3,24 @@ using System.Collections;
 
 public class Mainscript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public Transform rightDoor;
+
+	bool openorclose = false;
+
+	void Start() {
+		animation["right"].AddMixingTransform(rightDoor);
+		animation["rightclose"].AddMixingTransform(rightDoor);
 	}
-	
-	// Update is called once per frame
-	void OnCollisionExit(Collision collisionInfo) {
-		print("No longer in contact with " + collisionInfo.transform.name);
+
+	public void Open () {
+		if (openorclose == false) {
+			animation.Play ("left");
+			animation.Blend ("right");
+			openorclose = true;
+		} else {
+			animation.Play("leftclose");
+			animation.Blend("rightclose");
+			openorclose = false;
+		}
 	}
 }

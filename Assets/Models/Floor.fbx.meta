@@ -1,13 +1,40 @@
 fileFormatVersion: 2
-guid: df4ace6f64f566846bf335cf874d3a7b
+guid: 4946ff75fc1e51341b7096d7aeb4520e
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane
+    100000: Cube
+    100002: Cube.002
+    100004: Cube.004
+    100006: //RootNode
+    100008: Plane
+    100010: Plane.001
+    100012: Plane.003
+    400000: Cube
+    400002: Cube.002
+    400004: Cube.004
+    400006: //RootNode
+    400008: Plane
+    400010: Plane.001
+    400012: Plane.003
+    2300000: Cube
+    2300002: Cube.002
+    2300004: Cube.004
+    2300006: Plane
+    2300008: Plane.001
+    2300010: Plane.003
+    3300000: Cube
+    3300002: Cube.002
+    3300004: Cube.004
+    3300006: Plane
+    3300008: Plane.001
+    3300010: Plane.003
+    4300000: Cube
+    4300002: Plane.001
+    4300004: Plane
+    4300006: Plane.003
+    4300008: Cube.002
+    4300010: Cube.004
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -43,7 +70,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 0
+    splitTangentsAcrossUV: 1
     normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
@@ -60,6 +87,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   additionalBone: 0
   userData: 
