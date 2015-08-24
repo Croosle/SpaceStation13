@@ -8,18 +8,18 @@ public class Mainscript : MonoBehaviour {
 	bool openorclose = false;
 
 	void Start() {
-		animation["right"].AddMixingTransform(rightDoor);
-		animation["rightclose"].AddMixingTransform(rightDoor);
+		GetComponent<Animation>()["right"].AddMixingTransform(rightDoor);
+		GetComponent<Animation>()["rightclose"].AddMixingTransform(rightDoor);
 	}
 
 	public void Open () {
 		if (openorclose == false) {
-			animation.Play ("left");
-			animation.Blend ("right");
+			GetComponent<Animation>().Play ("left");
+			GetComponent<Animation>().Blend ("right");
 			openorclose = true;
 		} else {
-			animation.Play("leftclose");
-			animation.Blend("rightclose");
+			GetComponent<Animation>().Play("leftclose");
+			GetComponent<Animation>().Blend("rightclose");
 			openorclose = false;
 		}
 	}
