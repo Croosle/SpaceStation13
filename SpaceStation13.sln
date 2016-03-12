@@ -5,8 +5,6 @@ Project("{73C249CB-1E78-E4ED-E211-FF1B9E44A839}") = "SpaceStation13", "Assembly-
 EndProject
 Project("{73C249CB-1E78-E4ED-E211-FF1B9E44A839}") = "SpaceStation13", "Assembly-CSharp.csproj", "{FB400D1F-2FE8-7183-D165-BA26E253B6BD}"
 EndProject
-Project("{73C249CB-1E78-E4ED-E211-FF1B9E44A839}") = "SpaceStation13", "Assembly-UnityScript-firstpass.unityproj", "{5ED5112D-19B6-6C06-4399-E2230DDBBD64}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,15 +19,11 @@ Global
 		{FB400D1F-2FE8-7183-D165-BA26E253B6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB400D1F-2FE8-7183-D165-BA26E253B6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB400D1F-2FE8-7183-D165-BA26E253B6BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ED5112D-19B6-6C06-4399-E2230DDBBD64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ED5112D-19B6-6C06-4399-E2230DDBBD64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ED5112D-19B6-6C06-4399-E2230DDBBD64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ED5112D-19B6-6C06-4399-E2230DDBBD64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-														GlobalSection(MonoDevelopProperties) = preSolution
+																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -48,5 +42,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

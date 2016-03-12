@@ -4,20 +4,21 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	public Camera camera1;
-	private float nextTime = 0.0F;
-	private float timeRate = 1F;
 	RaycastHit hit;
-	public Mainscript Opendoor;
+	public GameObject door;
 	
 
 	// Update is called once per frame
 	void Update () {
 		Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
 		if (Physics.Raycast (ray, out hit)) {
-			if (Input.GetKeyDown (KeyCode.F) && Time.time > nextTime && hit.collider.gameObject.tag == "Finish") {
-				nextTime = Time.time + timeRate;
-				Opendoor = GameObject.FindObjectOfType(typeof(Mainscript)) as Mainscript;
-				Opendoor.Open();
+			if (hit.collider.gameObject.tag == "Finish" && Input.GetKeyUp(KeyCode.F)) {
+				door = hit.collider.gameObject;
+				if (door.GetComponent<Animator>().GetBool("IsOpen?") == false) {
+					door.GetComponent<Animator>().SetBool ("IsOpen?", true);
+				} else {
+					door.GetComponent<Animator>().SetBool ("IsOpen?", false);
+				}
 			}
 		}
 	}
