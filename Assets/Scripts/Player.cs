@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
         Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.gameObject.tag == "usable" && Input.GetKeyUp(KeyCode.F))
+            if (hit.collider.gameObject.tag == "usable" && Input.GetKeyDown(KeyCode.F))
             {
                 GameObject usableObject = hit.collider.gameObject;
                 Action action = (Action)usableObject.GetComponent(typeof(Action));

@@ -4,14 +4,18 @@ using System.Collections;
 public class Action : MonoBehaviour
 {
     public bool active = true;
+    Generator generator;
+
+    void Start () {
+        generator = (Generator)GameObject.FindWithTag("generator").GetComponent(typeof(Generator));
+    }
 
     public void Use()
     {
-        if (!active)
+        if (!active || !generator.HasEnergy())
         {
             return;
         }
-        Energy energy = (Energy)GameObject.FindWithTag("generator").GetComponent(typeof(Energy));
         if (gameObject.GetComponent<Animator>().GetBool("IsOpen?") == false)
         {
             gameObject.GetComponent<Animator>().SetBool("IsOpen?", true);
@@ -20,7 +24,7 @@ public class Action : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("IsOpen?", false);
         }
-        energy.SpendEnergy(5);
+        generator.SpendEnergy(5);
     }
 
     public void ActiveDoor()
