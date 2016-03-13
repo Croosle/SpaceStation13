@@ -16,6 +16,7 @@ public class Action : MonoBehaviour
         {
             return;
         }
+
         if (gameObject.GetComponent<Animator>().GetBool("IsOpen?") == false)
         {
             gameObject.GetComponent<Animator>().SetBool("IsOpen?", true);
@@ -24,6 +25,7 @@ public class Action : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("IsOpen?", false);
         }
+
         generator.SpendEnergy(5);
     }
 
