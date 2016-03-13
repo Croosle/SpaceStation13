@@ -1,25 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
-	public Camera camera1;
-	RaycastHit hit;
-	public GameObject door;
-	
+    public Camera camera1;
+    RaycastHit hit;
 
-	// Update is called once per frame
-	void Update () {
-		Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
-		if (Physics.Raycast (ray, out hit)) {
-			if (hit.collider.gameObject.tag == "Finish" && Input.GetKeyUp(KeyCode.F)) {
-				door = hit.collider.gameObject;
-				if (door.GetComponent<Animator>().GetBool("IsOpen?") == false) {
-					door.GetComponent<Animator>().SetBool ("IsOpen?", true);
-				} else {
-					door.GetComponent<Animator>().SetBool ("IsOpen?", false);
-				}
-			}
-		}
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+        Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.collider.gameObject.tag == "usable" && Input.GetKeyUp(KeyCode.F))
+            {
+                GameObject usableObject = hit.collider.gameObject;
+                Action action = (Action)usableObject.GetComponent(typeof(Action));
+                action.Use();
+            }
+        }
+    }
 }

@@ -45,6 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Door\Action.cs" />
+     <Compile Include="Assets\Scripts\Door\Door.cs" />
+     <Compile Include="Assets\Scripts\Energy.cs" />
+     <Compile Include="Assets\Scripts\Lamp.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Алексей/Documents/GitHub/SpaceStation13/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
