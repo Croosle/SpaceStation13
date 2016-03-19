@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/SpaceStation.unity
-  isLoaded: 1
-  isActive: 1
